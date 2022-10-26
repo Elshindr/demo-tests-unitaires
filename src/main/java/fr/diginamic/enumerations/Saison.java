@@ -8,7 +8,10 @@ package fr.diginamic.enumerations;
 public enum Saison {
 
 	/** Les 4 instances de Saison */
-	PRINTEMPS("Printemps", 1), ETE("Eté", 2), AUTOMNE("Automne", 3), HIVER("Hiver", 4);
+	PRINTEMPS("Printemps", 1),
+	ETE("Ete", 2),
+	AUTOMNE("Automne", 3),
+	HIVER("Hiver", 4);
 
 	/** libelle */
 	private String libelle;
@@ -34,12 +37,10 @@ public enum Saison {
 	 */
 	public static Saison valueOfLibelle(String libelle) {
 		Saison[] saisons = Saison.values();
+
 		for (Saison saison : saisons) {
 			if (libelle.equals(saison.getLibelle())) {
 				return saison;
-			}
-			else {
-				return null;
 			}
 		}
 		return null;
