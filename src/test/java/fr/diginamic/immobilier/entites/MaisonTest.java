@@ -84,7 +84,7 @@ class MaisonTest {
         assertEquals(maison.superficieTypePiece(Piece.TYPE_WC), 88);
         assertEquals(maison.superficieTypePiece(Piece.TYPE_CHAMBRE), 12);
         assertEquals(maison.superficieTypePiece(Piece.TYPE_SDB), 22);
-
+        assertNotEquals(maison.superficieTypePiece(null), 22);
     }
 
     @Test
@@ -103,7 +103,7 @@ class MaisonTest {
         maison.ajouterPiece(wc);
 
         assertNotEquals(maison.calculerSurface(), 12);
-        assertEquals(maison.calculerSurface(), 12+12+19+44+22);
+        assertEquals(maison.calculerSurface(), 12+19+44+12+44+22);
     }
 
 }
